@@ -64,7 +64,7 @@ namespace SearchSortPaging.Controllers
 
             }
 
-            return View(records.ToPagedList(pageNumber ?? 1, 15));
+            return View(records.ToPagedList(pageNumber ?? 1, 10));
         }
 
 
