@@ -25,11 +25,10 @@ namespace SearchSortPaging.Controllers
             //if the sort parameter is null or empty then we are initializing the value as descending name  
             ViewBag.SortByName = string.IsNullOrEmpty(sort) ? "descending name" : "";
             //if the sort value is gender then we are initializing the value as descending gender  
-            ViewBag.SortByPostnr = sort == "Postnr" ? "descending postnr" : "Postnr";
+            ViewBag.SortByPostnr = sort == "Postnr" ? "descending postnr" : "postnr";
 
             //here we are converting the db.Students to AsQueryable so that we can invoke all the extension methods on variable records.  
             var records = db.vw_Co2Db_Virksomheder.AsQueryable();
-
 
             //if a user choose the radio button option as Subject  
             switch (option)
@@ -51,11 +50,11 @@ namespace SearchSortPaging.Controllers
                     records = records.OrderByDescending(x => x.Firmanavn);
                     break;
 
-                case "descending gender":
+                case "descending postnr":
                     records = records.OrderByDescending(x => x.Postnr);
                     break;
 
-                case "Postnr":
+                case "postnr":
                     records = records.OrderBy(x => x.Postnr);
                     break;
 
