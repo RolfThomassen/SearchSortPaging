@@ -26,5 +26,12 @@ namespace SearchSortPaging.Controllers
 
             return View();
         }
+
+        public ActionResult Virksomhed()
+        {
+            ViewBag.Message = "Virksomheder";
+
+            return View();
+        }
     }
 }

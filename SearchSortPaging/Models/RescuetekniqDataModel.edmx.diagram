@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d784f36f2e9a452c90226c76fe2b1ce8" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Battery" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Battery_Company" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Battery_Electrod_List" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Battery_Electrod_List_BilagStatus" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_BatteryAktiv" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_BatteryUdlob" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Electrod" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Electrod_Company" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_ElectrodAktiv" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Infolist" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Redning" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_RedningAktiv" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_RedningUdlob" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Service" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Service_Aktiv" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Service_Company" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Service_Udlob" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_AED_Trainer" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Agent_Virksomhed" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Agents" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Aiva" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Campaign" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Campaign_Company" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Company_KundeGrp_VarePris" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Currency" Width="1.5" PointX="20.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Dokumenter" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Dokumenter_Firmadokumenter" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Dokumenter_Forsikringer" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_DokumenterBlob" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_DokumenterClob" Width="1.5" PointX="22.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash" Width="1.5" PointX="22.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash_Bottle" Width="1.5" PointX="10.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash_Bottle_Company" Width="1.5" PointX="12.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash_BottleAktiv" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash_BottleUdlob" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash_Service" Width="1.5" PointX="24.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash_Service_Aktiv" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash_Service_Company" Width="1.5" PointX="24.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_EyeWash_Service_Udlob" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_FirstAidBag" Width="1.5" PointX="26.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_FirstAidBag_Infolist" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_FirstAidBag_Service" Width="1.5" PointX="12.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_FirstAidBag_Service_Aktiv" Width="1.5" PointX="28.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_FirstAidBag_Service_Company" Width="1.5" PointX="28.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_FirstAidBag_Service_Udlob" Width="1.5" PointX="18.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Hospitalforsikring" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_HospitalsForsikring" Width="1.5" PointX="2.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_HtmlPageContent" Width="1.5" PointX="4.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Incasso" Width="1.5" PointX="30.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_InfositeContent" Width="1.5" PointX="14.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_InfositeContents" Width="1.5" PointX="30.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_InfositePage" Width="1.5" PointX="20.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_InfositePages" Width="1.5" PointX="22.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Infosites" Width="1.5" PointX="24.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Invoice_Agent_Provision_list" Width="1.5" PointX="30.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Invoice_Head" Width="1.5" PointX="32.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Invoice_Head_All" Width="1.5" PointX="32.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Invoice_Line" Width="1.5" PointX="32.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Invoice_Stats" Width="1.5" PointX="34.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Invoice_TotalInvoicePrice" Width="1.5" PointX="34.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Korrespondance" Width="1.5" PointX="34.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Korrespondance_all" Width="1.5" PointX="10.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_KorrespondanceBlob" Width="1.5" PointX="34.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_KundeGrp" Width="1.5" PointX="34.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_KundeGrp_Pris" Width="1.5" PointX="34.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_KursusDag" Width="1.5" PointX="26.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_KursusDagListeKursister" Width="1.5" PointX="34.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_KursusDeltager" Width="1.5" PointX="12.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_KursusListe" Width="1.5" PointX="14.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_KursusPolicy" Width="1.5" PointX="16.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Logline" Width="1.5" PointX="36.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Medarbejder" Width="1.5" PointX="36.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Medarbejder_Forsikring" Width="1.5" PointX="4.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_MedarbejderGruppe_Hospitalforsikring" Width="1.5" PointX="36.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_MedarbejderGruppe_Medarbejder" Width="1.5" PointX="36.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_MedarbejderGruppe_Pensionsopsparing" Width="1.5" PointX="36.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_MedarbejderGruppe_Virksomheder_list" Width="1.5" PointX="0.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_MedarbejderGrupper" Width="1.5" PointX="38.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_News" Width="1.5" PointX="38.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_NewsGrp" Width="1.5" PointX="6.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_NewsGrpList" Width="1.5" PointX="38.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Noter" Width="1.5" PointX="38.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_PageAccess" Width="1.5" PointX="18.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Pax" Width="1.5" PointX="38.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Pensionsopsparing" Width="1.5" PointX="20.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Postnr" Width="1.5" PointX="22.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_PractiMan" Width="1.5" PointX="24.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_PurchaseOrder" Width="1.5" PointX="26.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_PurchaseOrder_TotalOrderPrice" Width="1.5" PointX="28.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_PurchaseOrderItem" Width="1.5" PointX="8.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Tilbud" Width="1.5" PointX="30.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Tilbud_TotalTilbudspris" Width="1.5" PointX="32.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_TilbudHospital" Width="1.5" PointX="40.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Tilbudhospital_Virksomhed" Width="1.5" PointX="40.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_TilbudsLinie" Width="1.5" PointX="40.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_UserRoleList" Width="1.5" PointX="40.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Vare" Width="1.5" PointX="40.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_VareGrp" Width="1.5" PointX="0.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_VareGrpList" Width="1.5" PointX="10.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_VareList" Width="1.5" PointX="12.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Virksomheder" Width="1.5" PointX="14.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vicjos1_rescuetekniq_testModel.vw_Co2Db_Virksomheder_Service_Weber" Width="1.5" PointX="42.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

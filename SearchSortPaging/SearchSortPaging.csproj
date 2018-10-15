@@ -46,9 +46,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -197,12 +205,1237 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\VirksomhedController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Co2Db_AED_Battery_SelectAllExpiredEail_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Battery_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Battery_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Battery_SelectByAED_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Battery_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Battery_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Battery_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Electrod_SelectAllExpiredEmail_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Electrod_SelectAllExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Electrod_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Electrod_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Electrod_SelectByAED_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Electrod_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Electrod_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Electrod_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Redning_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Redning_SelectByAED_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Redning_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Redning_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Redning_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Search_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectAllExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectByAfventer_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectByBilagStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectByConcernID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectBySerialNo_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectConcernAED_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Service_SelectAllExpiredEmail_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Service_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Service_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Service_SelectByAED_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Service_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Service_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Service_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Service_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Trainer_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Trainer_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Trainer_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Trainer_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_AED_Trainer_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Agents_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Agents_SelectByAgentGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Agents_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Agents_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Agent_SelectByAgent_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Aiva_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Aiva_SelectCompanyID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Aiva_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Aiva_SelectModelID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2DB_Campaign_Company_Search_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2DB_Campaign_Company_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2DB_Campaign_Company_SelectCampaignID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2DB_Campaign_Company_SelectCampaignNo_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2DB_Campaign_Company_SelectCompanyID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2DB_Campaign_Company_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Campaign_Search_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Campaign_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Campaign_SelectOneCampaign_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Campaign_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Combobox_ListAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Combobox_SelectAll_AddValue_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Combobox_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Combobox_SelectByID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Combobox_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Currency_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Currency_SelectByCode_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Currency_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Currency_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Currency_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Dokumenter_Forsikring_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Dokumenter_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Dokumenter_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Dokumenter_SelectByTypeCategory_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Dokumenter_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Bottle_SelectAllExpiredEail_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Bottle_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Bottle_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Bottle_SelectByEYE_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Bottle_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Bottle_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Bottle_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Search_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectByAfventer_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectByBilagStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectByConcernID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectBySerialNo_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectConcernEYE_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Service_SelectAllExpiredEmail_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Service_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Service_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Service_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Service_SelectByEYE_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Service_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Service_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_EYE_Service_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Search_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectAllExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectByAfventer_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectByBilagStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectByConcernID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectBySerialNo_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectConcernFAB_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectConcernFirstAidBag_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectAllExpiredEmail_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectAllSoonExpired_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectByFAB_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectByFirstAidBag_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectByGUID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_FirstAidBag_Service_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Hospitalsforsikring_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Hospitalsforsikring_SelectByMedarbGrp_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Hospitalsforsikring_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_HtmlPageContent_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_HtmlPageContent_SelectByAlias_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_HtmlPageContent_SelectByTitle_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_HtmlPageContent_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Incasso_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Incasso_SelectByStatusCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Incasso_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositeContent_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositeContent_SelectPagePos_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositePages_ListPages_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositePages_MoveBottom_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositePages_MoveDown_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositePages_MoveLeft_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositePages_MoveRight_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositePages_MoveUp_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_InfositePages_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Head_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Head_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Head_SelectByStatusCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Head_SelectByStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Head_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Head_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Line_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Line_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Line_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Invoice_Stats_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Korrespondance_SearchAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Korrespondance_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Korrespondance_SelectByType_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Korrespondance_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_Pris_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_Pris_SelectByKundeGrpVareID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_Pris_SelectByKundeGrpVareNr_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_Pris_SelectByKundeGrp_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_Pris_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_Pris_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_Pris_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KundeGrp_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDag_SelectAllByParent_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDag_SelectAllList_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDag_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDag_SelectByDate_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDag_SelectByKursusDeltager_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDag_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDag_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDag_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDeltager_SelectAllCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDeltager_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDeltager_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDeltager_SelectIDAllCompanyList_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDeltager_SelectIDAllDagList_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDeltager_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusDeltager_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusList_SelectByKursusDag_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusList_SelectByKursusDeltager_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusPolicy_SelectAllCompanyID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusPolicy_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusPolicy_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusPolicy_SelectByType_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusPolicy_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_KursusPolicy_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Logline_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_MedarbejderGruppe_MemberCvrnr_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_MedarbejderGruppe_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_MedarbejderGruppe_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Medarbejder_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Medarbejder_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Medarbejder_SelectFilter_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Medarbejder_SelectMedarbejderGlobal_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Medarbejder_SelectMedArbGrp_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Medarbejder_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_NewsGrp_SelectAllByParent_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_NewsGrp_SelectAllList_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_NewsGrp_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_NewsGrp_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_NewsGrp_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_NewsGrp_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_News_SelectAllNewsGrp_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_News_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_News_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_News_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_News_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Noter_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Noter_SelectByType_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Noter_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pax_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pax_SelectCompanyID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pax_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pax_SelectModelID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pensionsopsparing_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pensionsopsparing_SelectByMedarbGrp_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pensionsopsparing_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pensionsopsparing_SelectByStatusCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pensionsopsparing_SelectByStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Pensionsopsparing_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Postnr_Search_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Postnr_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Postnr_SelectOnePostnr_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Postnr_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PractiMan_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PractiMan_SelectCompanyID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PractiMan_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PractiMan_SelectModelID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrderItem_Search_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrderItem_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrderItem_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrderItem_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrder_Search_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrder_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrder_SelectByStatusSupplier_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrder_SelectByStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrder_SelectBySupplier_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrder_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_PurchaseOrder_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHeader_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHeader_SelectByCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHeader_SelectByStatusCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHeader_SelectByStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHeader_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHeader_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHospital_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHospital_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHospital_SelectByStatusCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHospital_SelectByStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHospital_SelectByUserName_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudHospital_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudsLinie_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudsLinie_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_TilbudsLinie_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_VareGrp_SelectAllByParent_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_VareGrp_SelectAllList_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_VareGrp_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_VareGrp_SelectByAlias_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_VareGrp_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_VareGrp_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_VareGrp_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Vare_SearchByVareNr_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Vare_SelectAllVareGrp_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Vare_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Vare_SelectByVarenr_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Vare_SelectID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Vare_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Vare_VareList_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SearchByCvrnr_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SearchFilter_ID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SearchFilter_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SearchMotherCompany_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectAllCvrnr_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectAllSupplier_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectAll_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectBySearchStatus_ID_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectBySearchStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectBySearch_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectByUserName_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectChildren_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectCvrnrStatus_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_SelectOne_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Co2Db_Virksomheder_WeberService_YearMonth_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RescuetekniqDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RescuetekniqDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RescuetekniqDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RescuetekniqDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RescuetekniqDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RescuetekniqSPModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RescuetekniqSPModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RescuetekniqSPModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RescuetekniqSPModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RescuetekniqSPModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SplitWords_Result.cs">
+      <DependentUpon>RescuetekniqSPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Battery.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_BatteryAktiv.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_BatteryUdlob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Battery_Company.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Battery_Electrod_List.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Battery_Electrod_List_BilagStatus.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Electrod.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_ElectrodAktiv.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Electrod_Company.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Infolist.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Redning.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_RedningAktiv.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_RedningUdlob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Service.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Service_Aktiv.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Service_Company.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Service_Udlob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_AED_Trainer.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Agents.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Agent_Virksomhed.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Aiva.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Campaign.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Campaign_Company.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Company_KundeGrp_VarePris.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Currency.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Dokumenter.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_DokumenterBlob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_DokumenterClob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Dokumenter_Firmadokumenter.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Dokumenter_Forsikringer.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash_Bottle.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash_BottleAktiv.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash_BottleUdlob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash_Bottle_Company.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash_Service.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash_Service_Aktiv.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash_Service_Company.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_EyeWash_Service_Udlob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_FirstAidBag.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_FirstAidBag_Infolist.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_FirstAidBag_Service.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_FirstAidBag_Service_Aktiv.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_FirstAidBag_Service_Company.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_FirstAidBag_Service_Udlob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Hospitalforsikring.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_HospitalsForsikring.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_HtmlPageContent.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Incasso.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_InfositeContent.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_InfositeContents.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_InfositePage.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_InfositePages.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Infosites.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Invoice_Agent_Provision_list.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Invoice_Head.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Invoice_Head_All.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Invoice_Line.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Invoice_Stats.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Invoice_TotalInvoicePrice.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Korrespondance.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_KorrespondanceBlob.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Korrespondance_all.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_KundeGrp.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_KundeGrp_Pris.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_KursusDag.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_KursusDagListeKursister.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_KursusDeltager.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_KursusListe.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_KursusPolicy.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Logline.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Medarbejder.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_MedarbejderGrupper.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_MedarbejderGruppe_Hospitalforsikring.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_MedarbejderGruppe_Medarbejder.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_MedarbejderGruppe_Pensionsopsparing.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_MedarbejderGruppe_Virksomheder_list.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Medarbejder_Forsikring.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_News.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_NewsGrp.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_NewsGrpList.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Noter.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_PageAccess.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Pax.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Pensionsopsparing.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Postnr.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_PractiMan.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_PurchaseOrder.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_PurchaseOrderItem.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_PurchaseOrder_TotalOrderPrice.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Tilbud.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_TilbudHospital.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Tilbudhospital_Virksomhed.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_TilbudsLinie.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Tilbud_TotalTilbudspris.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_UserRoleList.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Vare.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_VareGrp.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_VareGrpList.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_VareList.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Virksomheder.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Co2Db_Virksomheder_Service_Weber.cs">
+      <DependentUpon>RescuetekniqDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -211,14 +1444,49 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\RescuetekniqDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RescuetekniqDataModel.edmx</DependentUpon>
+      <LastGenOutput>RescuetekniqDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\RescuetekniqDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RescuetekniqDataModel.edmx</DependentUpon>
+      <LastGenOutput>RescuetekniqDataModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\RescuetekniqSPModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RescuetekniqSPModel.edmx</DependentUpon>
+      <LastGenOutput>RescuetekniqSPModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\RescuetekniqSPModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RescuetekniqSPModel.edmx</DependentUpon>
+      <LastGenOutput>RescuetekniqSPModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\RescuetekniqDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RescuetekniqDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\RescuetekniqDataModel.edmx.diagram">
+      <DependentUpon>RescuetekniqDataModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\RescuetekniqSPModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RescuetekniqSPModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\RescuetekniqSPModel.edmx.diagram">
+      <DependentUpon>RescuetekniqSPModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -265,6 +1533,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Virksomhed\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +1550,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
