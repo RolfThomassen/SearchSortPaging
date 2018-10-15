@@ -25,7 +25,7 @@ namespace SearchSortPaging.Controllers
             //if the sort parameter is null or empty then we are initializing the value as descending name  
             ViewBag.SortByName = string.IsNullOrEmpty(sort) ? "descending name" : "";
             //if the sort value is gender then we are initializing the value as descending gender  
-            ViewBag.SortByGender = sort == "Gender" ? "descending gender" : "Gender";
+            ViewBag.SortByPostnr = sort == "Postnr" ? "descending postnr" : "Postnr";
 
             //here we are converting the db.Students to AsQueryable so that we can invoke all the extension methods on variable records.  
             var records = db.vw_Co2Db_Virksomheder.AsQueryable();
@@ -35,17 +35,37 @@ namespace SearchSortPaging.Controllers
             switch (option)
             {
                 case "Postnr":
-                    return View(db.vw_Co2Db_Virksomheder.Where(x => x.Postnr.Contains(search) || search == null).ToList().ToPagedList(pageNumber ?? 1, 15));
+                    records = records.Where(x => x.Postnr.Contains(search) || search == null);
                     break;
                 case "Kontakt":
-                    return View(db.vw_Co2Db_Virksomheder.Where(x => x.AdminNavn.Contains(search) || search == null).ToList().ToPagedList(pageNumber ?? 1, 15));
+                    records = records.Where(x => x.AdminNavn.Contains(search) || search == null);
                     break;
                 default:
-                    return View(db.vw_Co2Db_Virksomheder.Where(x => x.Firmanavn.Contains(search) || search == null).ToList().ToPagedList(pageNumber ?? 1, 15));
+                    records = records.Where(x => x.Firmanavn.Contains(search) || search == null);
                     break;
             }
-            //return View(records.ToPagedList(pageNumber ?? 1, 3));
 
+            switch (sort)
+            {
+                case "descending name":
+                    records = records.OrderByDescending(x => x.Firmanavn);
+                    break;
+
+                case "descending gender":
+                    records = records.OrderByDescending(x => x.Postnr);
+                    break;
+
+                case "Postnr":
+                    records = records.OrderBy(x => x.Postnr);
+                    break;
+
+                default:
+                    records = records.OrderBy(x => x.Firmanavn);
+                    break;
+
+            }
+
+            return View(records.ToPagedList(pageNumber ?? 1, 15));
         }
 
 
