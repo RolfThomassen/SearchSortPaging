@@ -73,5 +73,28 @@ namespace SearchSortPaging.Controllers
             return View();
         }
 
+
+        public ActionResult List(string option, string search, int? pageNumber, string sort)
+        {
+            //here we are converting the db.Students to AsQueryable so that we can invoke all the extension methods on variable records.  
+            var records = db.vw_Co2Db_Virksomheder.AsQueryable();
+
+            //if a user choose the radio button option as Subject  
+            switch (option)
+            {
+                case "Postnr":
+                    records = records.Where(x => x.Postnr.Contains(search) || search == null);
+                    break;
+                case "Kontakt":
+                    records = records.Where(x => x.AdminNavn.Contains(search) || search == null);
+                    break;
+                default:
+                    records = records.Where(x => x.Firmanavn.Contains(search) || search == null);
+                    break;
+            }
+
+            return View(records.ToPagedList(pageNumber ?? 1, 10));
+        }
+
     }
 }
