@@ -33,37 +33,18 @@ namespace SearchSortPaging.Controllers
             //if a user choose the radio button option as Subject  
             switch (option)
             {
-                case "Postnr":
-                    records = records.Where(x => x.Postnr.Contains(search) || search == null);
-                    break;
-                case "Kontakt":
-                    records = records.Where(x => x.AdminNavn.Contains(search) || search == null);
-                    break;
-                default:
-                    records = records.Where(x => x.Firmanavn.Contains(search) || search == null);
-                    break;
+                case "Postnr": records = records.Where(x => x.Postnr.Contains(search) || search == null); break;
+                case "Kontakt": records = records.Where(x => x.AdminNavn.Contains(search) || search == null); break;
+                default: records = records.Where(x => x.Firmanavn.Contains(search) || search == null); break;
             }
 
             switch (sort)
             {
-                case "descending name":
-                    records = records.OrderByDescending(x => x.Firmanavn);
-                    break;
-
-                case "descending postnr":
-                    records = records.OrderByDescending(x => x.Postnr);
-                    break;
-
-                case "postnr":
-                    records = records.OrderBy(x => x.Postnr);
-                    break;
-
-                default:
-                    records = records.OrderBy(x => x.Firmanavn);
-                    break;
-
+                case "descending name": records = records.OrderByDescending(x => x.Firmanavn); break;
+                case "descending postnr": records = records.OrderByDescending(x => x.Postnr); break;
+                case "postnr": records = records.OrderBy(x => x.Postnr); break;
+                default: records = records.OrderBy(x => x.Firmanavn); break;
             }
-
             return View(records.ToPagedList(pageNumber ?? 1, 10));
         }
 

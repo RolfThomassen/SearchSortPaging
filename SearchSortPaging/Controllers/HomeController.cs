@@ -33,5 +33,11 @@ namespace SearchSortPaging.Controllers
 
             return View();
         }
+        public ActionResult System()
+        {
+            ViewBag.Message = "System";
+
+            return View();
+        }
     }
 }

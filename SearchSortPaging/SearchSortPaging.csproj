@@ -205,6 +205,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PostnrController.cs" />
     <Compile Include="Controllers\VirksomhedController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1534,6 +1535,13 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Virksomhed\Index.cshtml" />
+    <Content Include="Views\System\Index.cshtml" />
+    <Content Include="Views\System\Postnr.cshtml" />
+    <Content Include="Views\Postnr\Create.cshtml" />
+    <Content Include="Views\Postnr\Delete.cshtml" />
+    <Content Include="Views\Postnr\Details.cshtml" />
+    <Content Include="Views\Postnr\Edit.cshtml" />
+    <Content Include="Views\Postnr\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -22,6 +22,8 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Virksomheder", "Index", "Virksomhed")</li>
+                <li>@Html.ActionLink("System", "Index", "System")</li>
+                <li>@Html.ActionLink("Postnr", "Index", "Postnr")</li>
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("About", "About", "Home")</li>
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
@@ -32,9 +34,7 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Rescuetekniq ApS</p>
+        <hr />    <p>&copy; @DateTime.Now.Year - Rescuetekniq ApS</p>
         </footer>
     </div>
 
