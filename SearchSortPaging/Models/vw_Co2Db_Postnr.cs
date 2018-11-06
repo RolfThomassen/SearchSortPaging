@@ -11,7 +11,9 @@ namespace SearchSortPaging.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
     public partial class vw_Co2Db_Postnr
     {
         public int ID { get; set; }
@@ -21,6 +23,10 @@ namespace SearchSortPaging.Models
         public string Firma { get; set; }
         public Nullable<int> LandID { get; set; }
         public Nullable<bool> Provins { get; set; }
+
+        [Display(Name = "Land")]
         public string Land { get; set; }
+        public IEnumerable<SelectListItem> Lande { get; set; }
+
     }
 }
